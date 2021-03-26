@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+
+<VBox xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="chapter07.listings.listing09.Controller">
+	<children>
+		<TextField fx:id="textField" promptText="Eingabefeld" />
+		<Button fx:id="button" text="Drucktaste"
+			onAction="#inputToOutput" />
+		<Label fx:id="label" text="Ausgabefeld" />
+	</children>
+</VBox>
+

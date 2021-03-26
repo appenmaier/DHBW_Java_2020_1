@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+
+<VBox xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="chapter07.listings.listing11.InputViewController">
+	<children>
+		<TextField fx:id="input" />
+		<Button fx:id="goToOutputView" text="Weiter"
+			onAction="#goToOutputView" />
+	</children>
+</VBox>
+
