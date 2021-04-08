@@ -32,7 +32,7 @@ public class SuperStore {
 	public void displaySuperStore() {
 		System.out.println(description);
 		for (Sellable article : articles) {
-			article.displaySellable();
+			System.out.println(article.toString());
 		}
 	}
 

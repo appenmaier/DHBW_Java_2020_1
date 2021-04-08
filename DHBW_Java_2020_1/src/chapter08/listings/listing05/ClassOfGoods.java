@@ -2,7 +2,7 @@ package chapter08.listings.listing05;
 
 public enum ClassOfGoods {
 
-	BAKERY_PRODUCTS("Backwaren"), DAIRY_PRODUCTS("Milchprodukte"), FRUITS("Obst"), VEGETABLES("Gem�se");
+	BAKERY_PRODUCTS("Backwaren"), DAIRY_PRODUCTS("Milchprodukte"), FRUITS("Obst"), VEGETABLES("Gemüse");
 
 	/*
 	 * Attribute

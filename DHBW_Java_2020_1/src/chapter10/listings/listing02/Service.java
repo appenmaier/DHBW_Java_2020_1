@@ -10,14 +10,15 @@ public final class Service extends Product {
 	/*
 	 * Methoden
 	 */
-	public Service(String description, String unit, double price, boolean isStandardService) {
+	public Service(String description, String unit, double price, boolean isStandardService)
+			throws InvalidPriceException {
 		super(description, unit, price);
 		this.isStandardService = isStandardService;
 	}
 
-	public void displayProduct() {
+	public String toString() {
 		String standardService = (isStandardService) ? "Standardservice" : "individueller Service";
-		System.out.println(description + " - " + standardService + " - " + unit + " - " + price);
+		return id + " - " + description + " - " + standardService + " - " + unit + " - " + price;
 	}
 
 	public boolean isStandardService() {

@@ -32,7 +32,7 @@ public class SuperStore {
 	public void displaySuperStore() {
 		System.out.println(description);
 		for (Sellable article : articles) {
-			article.displaySellable();
+			System.out.println(article.toString());
 		}
 	}
 
@@ -41,7 +41,11 @@ public class SuperStore {
 	 */
 	public static interface Sellable {
 
-		void displaySellable();
+		int getId();
+
+		String getDescription();
+
+		double getPrice();
 
 	}
 
@@ -50,23 +54,42 @@ public class SuperStore {
 		/*
 		 * Attribute
 		 */
+		protected int id;
 		protected String description;
 		protected String unit;
 		protected double price;
 
 		public static int noProducts;
+		private static final long serialVersionUID = 1L;
 
 		/*
 		 * Methoden
 		 */
-		public Product(String description, String unit, double price) {
+		public Product(String description, String unit, double price) throws InvalidPriceException {
+			noProducts++;
+			this.id = noProducts;
 			this.description = description;
 			this.unit = unit;
-			this.price = price;
-			noProducts++;
+			setPrice(price);
 		}
 
-		public abstract void displayProduct();
+		public final void setPrice(double price) throws InvalidPriceException {
+			if (price <= 0) {
+				throw new InvalidPriceException();
+			}
+			this.price = price;
+		}
+
+		public final void setPrice(Double price) throws InvalidPriceException {
+			if (price <= 0) {
+				throw new InvalidPriceException();
+			}
+			this.price = price;
+		}
+
+		public int getId() {
+			return id;
+		}
 
 		public String getDescription() {
 			return description;
@@ -80,21 +103,11 @@ public class SuperStore {
 			return price;
 		}
 
-		public final void setPrice(double price) {
-			this.price = price;
-		}
-
-		public final void setPrice(Double price) {
-			this.price = price;
-		}
-
 		public static int getNoProducts() {
 			return noProducts;
 		}
 
-		public void displaySellable() {
-			displayProduct();
-		}
+		public abstract String toString();
 
 	}
 
@@ -108,13 +121,14 @@ public class SuperStore {
 		/*
 		 * Methoden
 		 */
-		public Goods(String description, String unit, double price, ClassOfGoods classOfGoods) {
+		public Goods(String description, String unit, double price, ClassOfGoods classOfGoods)
+				throws InvalidPriceException {
 			super(description, unit, price);
 			this.classOfGoods = classOfGoods;
 		}
 
-		public void displayProduct() {
-			System.out.println(description + " - " + classOfGoods.getDescription() + " - " + unit + " - " + price);
+		public String toString() {
+			return id + " - " + description + " - " + classOfGoods.getDescription() + " - " + unit + " - " + price;
 		}
 
 		public ClassOfGoods getClassOfGoods() {
@@ -133,14 +147,15 @@ public class SuperStore {
 		/*
 		 * Methoden
 		 */
-		public Service(String description, String unit, double price, boolean isStandardService) {
+		public Service(String description, String unit, double price, boolean isStandardService)
+				throws InvalidPriceException {
 			super(description, unit, price);
 			this.isStandardService = isStandardService;
 		}
 
-		public void displayProduct() {
+		public String toString() {
 			String standardService = (isStandardService) ? "Standardservice" : "individueller Service";
-			System.out.println(description + " - " + standardService + " - " + unit + " - " + price);
+			return id + " - " + description + " - " + standardService + " - " + unit + " - " + price;
 		}
 
 		public boolean isStandardService() {
@@ -177,10 +192,6 @@ public class SuperStore {
 
 		public double getPrice() {
 			return price;
-		}
-
-		public void displaySellable() {
-			System.out.println(id + " - " + description + "- " + price);
 		}
 
 	}

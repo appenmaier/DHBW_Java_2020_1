@@ -11,7 +11,7 @@ public class Listing1205 {
 		ArrayList<Product> products = new ArrayList<>();
 
 		try {
-			products.add(new Goods("Brot", "St�ck", 2.49, ClassOfGoods.BAKERY_PRODUCTS));
+			products.add(new Goods("Brot", "Stück", 2.49, ClassOfGoods.BAKERY_PRODUCTS));
 			products.add(new Service("Putzen", "Stunde", 50, true));
 		} catch (InvalidPriceException e) {
 			e.printStackTrace();

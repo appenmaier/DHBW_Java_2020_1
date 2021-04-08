@@ -2,6 +2,10 @@ package chapter08.listings.listing05;
 
 public interface Sellable {
 
-	void displaySellable();
+	int getId();
+
+	String getDescription();
+
+	double getPrice();
 
 }

@@ -30,8 +30,4 @@ public class Property implements Sellable {
 		return price;
 	}
 
-	public void displaySellable() {
-		System.out.println(id + " - " + description + "- " + price);
-	}
-
 }

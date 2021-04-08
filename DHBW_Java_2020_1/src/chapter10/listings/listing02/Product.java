@@ -1,27 +1,48 @@
 package chapter10.listings.listing02;
 
-public abstract class Product implements Sellable {
+import java.io.Serializable;
+
+public abstract class Product implements Sellable, Serializable {
 
 	/*
 	 * Attribute
 	 */
+	protected int id;
 	protected String description;
 	protected String unit;
 	protected double price;
 
 	public static int noProducts;
+	private static final long serialVersionUID = 1L;
 
 	/*
 	 * Methoden
 	 */
-	public Product(String description, String unit, double price) {
+	public Product(String description, String unit, double price) throws InvalidPriceException {
+		noProducts++;
+		this.id = noProducts;
 		this.description = description;
 		this.unit = unit;
-		this.price = price;
-		noProducts++;
+		setPrice(price);
 	}
 
-	public abstract void displayProduct();
+	public final void setPrice(double price) throws InvalidPriceException {
+		if (price <= 0) {
+			throw new InvalidPriceException();
+		}
+		this.price = price;
+	}
+
+	public final void setPrice(Double price) throws InvalidPriceException {
+		if (price <= 0) {
+			throw new InvalidPriceException();
+		}
+		this.price = price;
+	}
+
+	public int getId() {
+		return id;
+	}
 
 	public String getDescription() {
 		return description;
@@ -35,20 +56,10 @@ public abstract class Product implements Sellable {
 		return price;
 	}
 
-	public final void setPrice(double price) {
-		this.price = price;
-	}
-
-	public final void setPrice(Double price) {
-		this.price = price;
-	}
-
 	public static int getNoProducts() {
 		return noProducts;
 	}
 
-	public void displaySellable() {
-		displayProduct();
-	}
+	public abstract String toString();
 
 }

@@ -14,7 +14,7 @@ public class Listing0806b {
 		try (FileInputStream fis = new FileInputStream(file); ObjectInputStream ois = new ObjectInputStream(fis)) {
 			while (true) {
 				Goods goods = (Goods) ois.readObject();
-				goods.displayProduct();
+				System.out.println(goods.toString());
 			}
 		} catch (EOFException e) {
 			// End of File

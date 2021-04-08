@@ -10,13 +10,14 @@ public final class Goods extends Product {
 	/*
 	 * Methoden
 	 */
-	public Goods(String description, String unit, double price, ClassOfGoods classOfGoods) {
+	public Goods(String description, String unit, double price, ClassOfGoods classOfGoods)
+			throws InvalidPriceException {
 		super(description, unit, price);
 		this.classOfGoods = classOfGoods;
 	}
 
-	public void displayProduct() {
-		System.out.println(description + " - " + classOfGoods.getDescription() + " - " + unit + " - " + price);
+	public String toString() {
+		return id + " - " + description + " - " + classOfGoods.getDescription() + " - " + unit + " - " + price;
 	}
 
 	public ClassOfGoods getClassOfGoods() {

@@ -16,9 +16,9 @@ public final class Service extends Product {
 		this.isStandardService = isStandardService;
 	}
 
-	public void displayProduct() {
+	public String toString() {
 		String standardService = (isStandardService) ? "Standardservice" : "individueller Service";
-		System.out.println(description + " - " + standardService + " - " + unit + " - " + price);
+		return id + " - " + description + " - " + standardService + " - " + unit + " - " + price;
 	}
 
 	public boolean isStandardService() {

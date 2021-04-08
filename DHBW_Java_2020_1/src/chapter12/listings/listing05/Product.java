@@ -7,6 +7,7 @@ public abstract class Product implements Sellable, Serializable, Comparable<Prod
 	/*
 	 * Attribute
 	 */
+	protected int id;
 	protected String description;
 	protected String unit;
 	protected double price;
@@ -18,24 +19,11 @@ public abstract class Product implements Sellable, Serializable, Comparable<Prod
 	 * Methoden
 	 */
 	public Product(String description, String unit, double price) throws InvalidPriceException {
+		noProducts++;
+		this.id = noProducts;
 		this.description = description;
 		this.unit = unit;
 		setPrice(price);
-		noProducts++;
-	}
-
-	public abstract void displayProduct();
-
-	public String getDescription() {
-		return description;
-	}
-
-	public String getUnit() {
-		return unit;
-	}
-
-	public double getPrice() {
-		return price;
 	}
 
 	public final void setPrice(double price) throws InvalidPriceException {
@@ -52,13 +40,27 @@ public abstract class Product implements Sellable, Serializable, Comparable<Prod
 		this.price = price;
 	}
 
+	public int getId() {
+		return id;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public String getUnit() {
+		return unit;
+	}
+
+	public double getPrice() {
+		return price;
+	}
+
 	public static int getNoProducts() {
 		return noProducts;
 	}
 
-	public void displaySellable() {
-		displayProduct();
-	}
+	public abstract String toString();
 
 	public int compareTo(Product p) {
 		if (price - p.getPrice() < 0) {

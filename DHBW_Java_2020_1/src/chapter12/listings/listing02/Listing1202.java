@@ -10,7 +10,7 @@ public class Listing1202 {
 		ArrayList<Product> products = new ArrayList<>();
 
 		try {
-			products.add(new Goods("Brot", "St�ck", 2.49, ClassOfGoods.BAKERY_PRODUCTS));
+			products.add(new Goods("Brot", "Stück", 2.49, ClassOfGoods.BAKERY_PRODUCTS));
 			products.add(new Service("Putzen", "Stunde", 50, true));
 		} catch (InvalidPriceException e) {
 			e.printStackTrace();
@@ -18,12 +18,12 @@ public class Listing1202 {
 
 		for (Iterator<Product> iterator = products.iterator(); iterator.hasNext();) {
 			Product p = iterator.next();
-			p.displayProduct();
+			System.out.println(p.toString());
 		}
 
 		// Kurzschreibweise
 		for (Product p : products) {
-			p.displayProduct();
+			System.out.println(p.toString());
 		}
 
 	}
