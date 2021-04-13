@@ -42,15 +42,15 @@ public class Demo0501 {
 
 		// Mit Vererbung
 		ArrayList<Light> lights = new ArrayList<>();
-		lights.add(t1);
-		lights.add(t2);
-		lights.add(f1);
-		lights.add(f2);
+		lights.add(t1); // Upcast
+		lights.add(t2); // Upcast
+		lights.add(f1); // Upcast
+		lights.add(f2); // Upcast
 
 		for (Light l : lights) {
-			l.print();
-			l.switchOn();
-			l.switchOff();
+			l.switchOn(); // Polymorphie
+			l.print(); // Polymorphie
+			l.switchOff(); // Polymorphie
 		}
 
 	}
