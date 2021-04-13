@@ -3,7 +3,7 @@ package chapter05.demos.demo01;
 import java.util.ArrayList;
 
 /**
- * Vererbung
+ * Vererbung, Upcast und Polymorphie
  * 
  * @author Daniel Appenmaier
  *
@@ -50,6 +50,7 @@ public class Demo0501 {
 		for (Light l : lights) {
 			l.print();
 			l.switchOn();
+			l.switchOff();
 		}
 
 	}
