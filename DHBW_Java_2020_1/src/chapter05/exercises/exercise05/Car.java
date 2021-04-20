@@ -1,0 +1,39 @@
+package chapter05.exercises.exercise05;
+
+/**
+ * Auto
+ * 
+ * @author Daniel Appenmaier
+ *
+ */
+public final class Car extends Vehicle {
+
+	/*
+	 * Attribute
+	 */
+	private int seats;
+
+	/*
+	 * Methoden
+	 */
+	public Car(String make, String model, Engine engine, int seats) {
+		super(make, model, engine);
+		this.seats = seats;
+	}
+
+	public int getSeats() {
+		return seats;
+	}
+
+	public void doATurboBoost() {
+		speed *= 2;
+		System.out.println(
+				getMake() + " " + getModel() + " macht einen TurboBoost und beschleunigt auf " + speed + "km/h");
+	}
+
+	public void print() {
+		System.out.println(
+				getMake() + " " + getModel() + " (" + getEngine().getDescription() + ", " + seats + " Sitzplätze)");
+	}
+
+}
