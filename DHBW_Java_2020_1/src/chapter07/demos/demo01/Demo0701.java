@@ -28,7 +28,7 @@ public class Demo0701 extends Application {
 		System.out.println("start()");
 		View view = new View();
 		Scene scene = new Scene(view.getRoot());
-		primaryStage.setTitle("Demo 2.1");
+		primaryStage.setTitle("Demo 7.1");
 		primaryStage.setScene(scene);
 		primaryStage.show();
 	}
