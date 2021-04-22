@@ -5,7 +5,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 /**
- * JavaFX: Lebenszyklus einer JavaFX-Anwendung
+ * Aufbau einer JavaFX-Anwendung
  * 
  * @author Daniel Appenmaier
  *
