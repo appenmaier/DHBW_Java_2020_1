@@ -13,7 +13,7 @@ public class Listing0704 extends Application {
 	public void start(Stage primaryStage) {
 		View view = new View();
 		Scene scene = new Scene(view.getRoot());
-		primaryStage.setTitle("Listing 2.4");
+		primaryStage.setTitle("Listing 7.4");
 		primaryStage.setScene(scene);
 		primaryStage.show();
 	}

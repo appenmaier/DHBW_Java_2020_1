@@ -14,7 +14,7 @@ public class Listing0705 extends Application {
 		View view = new View();
 		Scene scene = new Scene(view.getRoot());
 		scene.getStylesheets().add(getClass().getResource("Stylesheet.css").toExternalForm());
-		primaryStage.setTitle("Listing 2.5");
+		primaryStage.setTitle("Listing 7.5");
 		primaryStage.setScene(scene);
 		primaryStage.show();
 	}

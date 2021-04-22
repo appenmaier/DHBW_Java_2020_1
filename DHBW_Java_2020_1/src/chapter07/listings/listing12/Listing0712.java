@@ -1,4 +1,4 @@
-package chapter07.listings.listing11;
+package chapter07.listings.listing12;
 
 import java.io.IOException;
 
@@ -8,7 +8,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-public class Listing0711 extends Application {
+public class Listing0712 extends Application {
 
 	public static void main(String[] args) {
 		launch(args);
@@ -17,7 +17,7 @@ public class Listing0711 extends Application {
 	public void start(Stage primaryStage) throws IOException {
 		Parent root = FXMLLoader.load(getClass().getResource("InputView.fxml"));
 		Scene scene = new Scene(root);
-		primaryStage.setTitle("Listing 7.11");
+		primaryStage.setTitle("Listing 7.12");
 		primaryStage.setScene(scene);
 		primaryStage.show();
 	}

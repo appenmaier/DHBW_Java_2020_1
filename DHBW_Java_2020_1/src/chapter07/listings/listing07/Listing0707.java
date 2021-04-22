@@ -17,7 +17,7 @@ public class Listing0707 extends Application {
 	public void start(Stage primaryStage) throws IOException {
 		Parent root = FXMLLoader.load(getClass().getResource("View.fxml"));
 		Scene scene = new Scene(root);
-		primaryStage.setTitle("Listing 2.7");
+		primaryStage.setTitle("Listing 7.7");
 		primaryStage.setScene(scene);
 		primaryStage.show();
 	}
