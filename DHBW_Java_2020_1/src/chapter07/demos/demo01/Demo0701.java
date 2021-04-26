@@ -24,11 +24,13 @@ public class Demo0701 extends Application {
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
-		// Aufbau der Bühne, Aufbau der Szene, Programmlogik
+		// Aufbau der Bühne und Aufruf der ersten Szene
 		System.out.println("start()");
 		View view = new View();
 		Scene scene = new Scene(view.getRoot());
 		primaryStage.setTitle("Demo 7.1");
+		primaryStage.setHeight(500);
+		primaryStage.setWidth(500);
 		primaryStage.setScene(scene);
 		primaryStage.show();
 	}
