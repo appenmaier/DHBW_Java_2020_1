@@ -10,11 +10,11 @@ public class View {
 	/*
 	 * Attribute
 	 */
-	// Bildschirmelemente aka Steuerelemente
+	// Controls
 	private TextField inputTextField;
 	private Button inputToOutputButton;
 	private Label outputLabel;
-	// Container aka Layout-Manager
+	// Container
 	private VBox root;
 
 	/*
