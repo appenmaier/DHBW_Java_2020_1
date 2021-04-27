@@ -20,7 +20,7 @@ public class Controller implements EventHandler<ActionEvent> {
 	}
 
 	@Override
-	public void handle(ActionEvent event) { // Ereignis behandlen
+	public void handle(ActionEvent event) {
 		// Eingabefeld der View auslesen
 		TextField inputTextField = view.getInputTextField();
 		String text = inputTextField.getText();

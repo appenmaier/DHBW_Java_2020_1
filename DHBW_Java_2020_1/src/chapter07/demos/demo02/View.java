@@ -21,10 +21,11 @@ public class View {
 	 * Methoden
 	 */
 	public View() {
-		inputTextField = new TextField("Eingabe");
+		inputTextField = new TextField();
+		inputTextField.setPromptText("Eingabe");
 
 		inputToOutputButton = new Button("Eingabe zu Ausgabe");
-		inputToOutputButton.setOnAction(new Controller(this)); // Für das Ereignis registrieren
+		inputToOutputButton.setOnAction(new Controller(this));
 
 		outputLabel = new Label("Ausgabe");
 
