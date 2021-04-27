@@ -13,11 +13,6 @@
 	-fx-base: rgb(255.0,255.0,255.0);	
 }
 
-#inputTextField {
-	-fx-background-color: 'white';
-	-fx-base: rgb(0.0,0.0,0.0);
-}
-
 :focused {
 	-fx-border-color: 'red';
 	-fx-border-width: 3.0;	
