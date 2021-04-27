@@ -1,4 +1,4 @@
-package chapter04.exercises.exercise16;
+package chapter06.exercises.exercise03;
 
 /**
  * Mitarbeiter
@@ -33,6 +33,17 @@ public class Employee {
 
 	public String getName() {
 		return person.getName();
+	}
+
+	public void setSalary(int salary) throws SalaryDecreaseException, SalaryIncreaseTooHighException {
+		if (salary < this.salary) {
+			throw new SalaryDecreaseException();
+		}
+		int percentageChange = salary * 100 / this.salary;
+		if (percentageChange > 110) {
+			throw new SalaryIncreaseTooHighException();
+		}
+		this.salary = salary;
 	}
 
 	public int getSalary() {
