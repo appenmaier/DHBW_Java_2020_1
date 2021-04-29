@@ -1,0 +1,19 @@
+.root {
+	-fx-font-size: 10.0pt;
+	-fx-font-family: 'Arial';
+	-fx-background: 'dimgray';
+}
+
+.label {
+	-fx-text-fill: 'white';
+}
+
+.button {
+	-fx-background-color: 'darkgray';
+	-fx-base: rgb(255.0,255.0,255.0);	
+}
+
+:focused {
+	-fx-border-color: 'red';
+	-fx-border-width: 3.0;	
+}

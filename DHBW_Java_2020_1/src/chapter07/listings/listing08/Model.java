@@ -1,4 +1,4 @@
-package chapter07.listings.listing12;
+package chapter07.listings.listing08;
 
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;

@@ -3,28 +3,21 @@ package chapter07.exercises.exercise01;
 import java.util.Random;
 
 import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
+import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 
-public class Controller implements EventHandler<ActionEvent> {
+public class Controller {
 
-	/*
-	 * Attribute
-	 */
-	private View view;
+	@FXML
+	Label diceValueLabel;
 
-	/*
-	 * Methoden
-	 */
-	public Controller(View view) {
-		this.view = view;
-	}
+	@FXML
+	Button rollTheDiceButton;
 
-	@Override
-	public void handle(ActionEvent event) {
+	public void rollTheDice(ActionEvent event) {
 		Random random = new Random();
 		Integer randomNumber = random.nextInt(6) + 1;
-		Label diceValueLabel = view.getDiceValueLabel();
 		diceValueLabel.setText(randomNumber.toString());
 	}
 

@@ -4,7 +4,7 @@
 <?import javafx.scene.control.Button?>
 
 <VBox xmlns:fx="http://javafx.com/fxml/1"
-	fx:controller="chapter07.listings.listing10.ControllerA">
+	fx:controller="chapter07.listings.listing06.ControllerA">
 	<children>
 		<Button fx:id="goToViewBButton" text="Gehe zu B"
 			onAction="#goToViewB" />

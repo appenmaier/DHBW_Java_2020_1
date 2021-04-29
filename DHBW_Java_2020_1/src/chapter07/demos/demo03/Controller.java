@@ -1,10 +1,10 @@
 package chapter07.demos.demo03;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import javafx.event.ActionEvent;
 
 public class Controller {
 
@@ -19,10 +19,10 @@ public class Controller {
 
 	@FXML
 	public void inputToOutput(ActionEvent event) {
-		// Eingabefeld der View auslesen
+		// Eingabe auslesen
 		String text = inputTextField.getText();
-		// Ausgabefeld der View ändern
+		// Eingabe anzeigen
 		outputLabel.setText(text);
 	}
-	
+
 }

@@ -5,7 +5,7 @@
 <?import javafx.scene.control.Label?>
 
 <VBox xmlns:fx="http://javafx.com/fxml/1"
-	fx:controller="chapter07.listings.listing11.OutputViewController">
+	fx:controller="chapter07.listings.listing07.OutputViewController">
 	<children>
 		<Label fx:id="output" />
 		<Button fx:id="goToInputView" text="Zurück"

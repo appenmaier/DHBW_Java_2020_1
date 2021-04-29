@@ -1,4 +1,4 @@
-package chapter07.listings.listing11;
+package chapter07.listings.listing07;
 
 public class Model {
 

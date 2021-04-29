@@ -7,7 +7,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 /**
- * Java FXML und Stylesheets
+ * Stylesheets
  * 
  * @author Daniel Appenmaier
  *
@@ -18,7 +18,6 @@ public class Demo0703 extends Application {
 		launch(args);
 	}
 
-	@Override
 	public void start(Stage primaryStage) throws Exception {
 		Parent root = FXMLLoader.load(getClass().getResource("View.fxml"));
 		Scene scene = new Scene(root);

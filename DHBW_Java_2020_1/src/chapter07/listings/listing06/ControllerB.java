@@ -1,4 +1,4 @@
-package chapter07.listings.listing10;
+package chapter07.listings.listing06;
 
 import java.io.IOException;
 

@@ -1,31 +1,27 @@
 package chapter07.demos.demo02;
 
 import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
+import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
-public class Controller implements EventHandler<ActionEvent> {
+public class Controller {
 
-	/*
-	 * Attribute
-	 */
-	private View view;
+	@FXML
+	private TextField inputTextField;
 
-	/*
-	 * Methoden
-	 */
-	public Controller(View view) {
-		this.view = view;
-	}
+	@FXML
+	private Button inputToOutputButton;
 
-	@Override
-	public void handle(ActionEvent event) {
-		// Eingabefeld der View auslesen
-		TextField inputTextField = view.getInputTextField();
+	@FXML
+	private Label outputLabel;
+
+	@FXML
+	public void inputToOutput(ActionEvent event) {
+		// Eingabe auslesen
 		String text = inputTextField.getText();
-		// Ausgabefeld der View ändern
-		Label outputLabel = view.getOutputLabel();
+		// Eingabe anzeigen
 		outputLabel.setText(text);
 	}
 

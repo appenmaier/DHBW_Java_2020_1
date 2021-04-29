@@ -7,7 +7,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 /**
- * Bilder, Rastercontainer und Bereichscontainer
+ * Bilderrahmen, Rastercontainer und Bereichscontainer
  * 
  * @author Daniel Appenmaier
  *
@@ -18,7 +18,6 @@ public class Demo0704 extends Application {
 		launch(args);
 	}
 
-	@Override
 	public void start(Stage primaryStage) throws Exception {
 		Parent root = FXMLLoader.load(getClass().getResource("View.fxml"));
 		Scene scene = new Scene(root);

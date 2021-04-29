@@ -1,4 +1,4 @@
-package chapter07.listings.listing12;
+package chapter07.listings.listing07;
 
 import java.io.IOException;
 import java.net.URL;
@@ -11,26 +11,27 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
-public class OutputViewController implements Initializable {
+public class InputViewController implements Initializable {
 
 	@FXML
-	Button goToInputView;
+	Button goToOutputView;
 	@FXML
-	Label output;
-
+	TextField input;
+	
 	Model model = Model.getInstance();
 
 	public void initialize(URL location, ResourceBundle resources) {
-		output.textProperty().bind(model.getText());
+		input.setText(model.getText());
 	}
 
-	public void goToInputView(ActionEvent actionEvent) throws IOException {
-		Parent root = FXMLLoader.load(getClass().getResource("InputView.fxml"));
+	public void goToOutputView(ActionEvent actionEvent) throws IOException {
+		model.setText(input.getText());
+		Parent root = FXMLLoader.load(getClass().getResource("OutputView.fxml"));
 		Scene scene = new Scene(root);
-		Stage stage = (Stage) goToInputView.getScene().getWindow();
+		Stage stage = (Stage) goToOutputView.getScene().getWindow();
 		stage.setScene(scene);
 		stage.show();
 	}

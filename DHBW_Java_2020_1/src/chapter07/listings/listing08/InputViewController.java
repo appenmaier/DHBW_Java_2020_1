@@ -1,4 +1,4 @@
-package chapter07.listings.listing11;
+package chapter07.listings.listing08;
 
 import java.io.IOException;
 import java.net.URL;
@@ -20,15 +20,14 @@ public class InputViewController implements Initializable {
 	Button goToOutputView;
 	@FXML
 	TextField input;
-	
+
 	Model model = Model.getInstance();
 
 	public void initialize(URL location, ResourceBundle resources) {
-		input.setText(model.getText());
+		input.textProperty().bindBidirectional(model.getText());
 	}
 
 	public void goToOutputView(ActionEvent actionEvent) throws IOException {
-		model.setText(input.getText());
 		Parent root = FXMLLoader.load(getClass().getResource("OutputView.fxml"));
 		Scene scene = new Scene(root);
 		Stage stage = (Stage) goToOutputView.getScene().getWindow();

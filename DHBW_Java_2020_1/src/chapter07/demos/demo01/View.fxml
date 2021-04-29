@@ -7,13 +7,11 @@
 <?import javafx.scene.layout.VBox?>
 
 <VBox alignment="CENTER" spacing="5.0"
-	xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1"
-	fx:controller="chapter07.demos.demo02.Controller">
+	xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
 	<children>
-		<TextField fx:id="inputTextField" promptText="Eingabe" />
-		<Button fx:id="inputToOutputButton" onAction="#inputToOutput"
-			text="Eingabe zu Ausgabe" />
-		<Label fx:id="outputLabel" text="Ausgabe" />
+		<TextField promptText="Eingabe" />
+		<Button text="Eingabe zu Ausgabe" />
+		<Label text="Ausgabe" />
 	</children>
 	<padding>
 		<Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />

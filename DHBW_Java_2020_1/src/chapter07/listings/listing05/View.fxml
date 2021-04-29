@@ -6,7 +6,7 @@
 <?import javafx.scene.control.Label?>
 
 <VBox xmlns:fx="http://javafx.com/fxml/1"
-	fx:controller="chapter07.listings.listing08.Controller">
+	fx:controller="chapter07.listings.listing05.Controller">
 	<children>
 		<TextField fx:id="textField" promptText="Eingabefeld" />
 		<Button fx:id="button" text="Drucktaste"

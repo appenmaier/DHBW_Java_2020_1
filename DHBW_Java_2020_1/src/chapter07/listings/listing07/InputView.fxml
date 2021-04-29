@@ -5,7 +5,7 @@
 <?import javafx.scene.control.TextField?>
 
 <VBox xmlns:fx="http://javafx.com/fxml/1"
-	fx:controller="chapter07.listings.listing11.InputViewController">
+	fx:controller="chapter07.listings.listing07.InputViewController">
 	<children>
 		<TextField fx:id="input" />
 		<Button fx:id="goToOutputView" text="Weiter"

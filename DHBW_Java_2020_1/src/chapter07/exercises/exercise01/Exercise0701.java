@@ -1,6 +1,8 @@
 package chapter07.exercises.exercise01;
 
 import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
@@ -10,10 +12,9 @@ public class Exercise0701 extends Application {
 		launch(args);
 	}
 
-	@Override
 	public void start(Stage primaryStage) throws Exception {
-		View view = new View();
-		Scene scene = new Scene(view.getRoot());
+		Parent root = FXMLLoader.load(getClass().getResource("View.fxml"));
+		Scene scene = new Scene(root);
 		primaryStage.setTitle("Exercise 7.1");
 		primaryStage.setScene(scene);
 		primaryStage.show();

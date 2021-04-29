@@ -1,21 +1,23 @@
 package chapter07.listings.listing04;
 
 import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
+import javafx.fxml.FXML;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 
-public class Controller implements EventHandler<ActionEvent> {
+public class Controller {
 
-	private View view;
+	@FXML
+	TextField textField;
+	@FXML
+	Button button;
+	@FXML
+	Label label;
 
-	public Controller(View view) {
-		this.view = view;
-	}
-
-	public void handle(ActionEvent actionEvent) {
-		if (actionEvent.getSource().equals(view.getButton())) {
-			String text = view.getTextField().getText();
-			view.getLabel().setText(text);
-		}
+	public void inputToOutput(ActionEvent actionEvent) {
+		String text = textField.getText();
+		label.setText(text);
 	}
 
 }
