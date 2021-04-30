@@ -18,7 +18,7 @@ public class Controller {
 	private Label outputLabel;
 
 	@FXML
-	public void inputToOutput(ActionEvent event) {
+	private void inputToOutput(ActionEvent event) {
 		// Eingabe auslesen
 		String text = inputTextField.getText();
 		// Eingabe anzeigen

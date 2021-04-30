@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.VBox?>
 
 <VBox alignment="CENTER" spacing="5.0"
-	xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1"
+	xmlns:fx="http://javafx.com/fxml/1"
 	fx:controller="chapter07.demos.demo02.Controller">
 	<children>
 		<TextField fx:id="inputTextField" promptText="Eingabe" />

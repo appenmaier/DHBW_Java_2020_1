@@ -15,7 +15,8 @@ public class Controller {
 	@FXML
 	Button rollTheDiceButton;
 
-	public void rollTheDice(ActionEvent event) {
+	@FXML
+	private void rollTheDice(ActionEvent event) {
 		Random random = new Random();
 		Integer randomNumber = random.nextInt(6) + 1;
 		diceValueLabel.setText(randomNumber.toString());
