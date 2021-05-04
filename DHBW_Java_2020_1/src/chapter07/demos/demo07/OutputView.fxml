@@ -9,7 +9,7 @@
 	fx:controller="chapter07.demos.demo07.OutputController">
 	<children>
 		<Label fx:id="outputLabel" text="Label" />
-		<Button fx:id="goToInputButton" mnemonicParsing="false"
-			onAction="#goToInput" text="Gehe zur InputView" />
+		<Button mnemonicParsing="false" onAction="#goToInput"
+			text="Gehe zur InputView" />
 	</children>
 </VBox>

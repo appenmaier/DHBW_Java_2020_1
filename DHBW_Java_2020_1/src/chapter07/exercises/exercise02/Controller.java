@@ -1,7 +1,5 @@
 package chapter07.exercises.exercise02;
 
-import java.util.Random;
-
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;

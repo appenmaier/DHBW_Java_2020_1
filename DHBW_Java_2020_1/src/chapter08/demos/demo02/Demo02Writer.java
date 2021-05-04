@@ -23,7 +23,12 @@ public class Demo02Writer {
 //		try {
 //			FileWriter fileWriter = new FileWriter(file);
 //			bufferedWriter = new BufferedWriter(fileWriter);
-//			bufferedWriter.write("Hallo Welt 2021");
+//			bufferedWriter.write("Hans;true");
+//			bufferedWriter.newLine();
+//			bufferedWriter.write("Peter;false");
+//			bufferedWriter.newLine();
+//			bufferedWriter.write("Lisa;false");
+//			bufferedWriter.newLine();
 //		} catch (IOException e) {
 //			e.printStackTrace();
 //		} finally {
@@ -37,9 +42,14 @@ public class Demo02Writer {
 //		}
 
 		// seit Java 7
-		try (FileWriter fileWriter = new FileWriter(file, true);
+		try (FileWriter fileWriter = new FileWriter(file);
 				BufferedWriter bufferedWriter = new BufferedWriter(fileWriter)) {
-			bufferedWriter.write("Hallo Welt 2022");
+			bufferedWriter.write("Hans;true");
+			bufferedWriter.newLine();
+			bufferedWriter.write("Peter;false");
+			bufferedWriter.newLine();
+			bufferedWriter.write("Lisa;false");
+			bufferedWriter.newLine();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

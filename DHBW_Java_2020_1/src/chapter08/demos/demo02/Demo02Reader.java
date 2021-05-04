@@ -21,7 +21,11 @@ public class Demo02Reader {
 				BufferedReader bufferedReader = new BufferedReader(fileReader)) {
 			String line;
 			while ((line = bufferedReader.readLine()) != null) {
-				System.out.println(line);
+				String[] tokens = line.split(";");
+				String name = tokens[0];
+				boolean isCool = Boolean.valueOf(tokens[1]);
+				System.out.println("name: " + name);
+				System.out.println("isCool: " + isCool);
 			}
 		} catch (IOException e) {
 			e.printStackTrace();
