@@ -7,7 +7,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 /**
- * Kommunikation zwischen Szenen
+ * Szenenwechsel
  * 
  * @author Daniel Appenmaier
  *

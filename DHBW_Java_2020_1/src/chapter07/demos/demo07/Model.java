@@ -1,4 +1,4 @@
-package chapter07.demos.demo06;
+package chapter07.demos.demo07;
 
 /**
  * Model für Demo0706

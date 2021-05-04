@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.VBox?>
 
 
-<VBox xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/16" fx:controller="chapter07.demos.demo06.OutputController">
+<VBox xmlns:fx="http://javafx.com/fxml/1" fx:controller="chapter07.demos.demo06.OutputController">
    <children>
       <Label fx:id="outputLabel" text="Label" />
       <Button fx:id="goToInputButton" mnemonicParsing="false" onAction="#goToInput" text="Gehe zur InputView" />
