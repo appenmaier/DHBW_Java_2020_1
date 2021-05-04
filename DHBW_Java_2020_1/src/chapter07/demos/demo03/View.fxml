@@ -11,8 +11,7 @@
 	fx:controller="chapter07.demos.demo02.Controller">
 	<children>
 		<TextField fx:id="inputTextField" promptText="Eingabe" />
-		<Button fx:id="inputToOutputButton" onAction="#inputToOutput"
-			text="Eingabe zu Ausgabe" />
+		<Button onAction="#inputToOutput" text="Eingabe zu Ausgabe" />
 		<Label fx:id="outputLabel" text="Ausgabe" />
 	</children>
 	<padding>
