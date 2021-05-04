@@ -6,8 +6,17 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
+/**
+ * Controller für View.fxml
+ * 
+ * @author Daniel Appenmaier
+ *
+ */
 public class Controller {
 
+	/*
+	 * Attribute
+	 */
 	@FXML
 	private TextField inputTextField;
 
@@ -17,6 +26,9 @@ public class Controller {
 	@FXML
 	private Label outputLabel;
 
+	/*
+	 * Methoden
+	 */
 	@FXML
 	private void inputToOutput(ActionEvent event) {
 		// Eingabe auslesen

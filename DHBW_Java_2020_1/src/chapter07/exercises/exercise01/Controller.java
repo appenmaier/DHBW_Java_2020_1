@@ -7,14 +7,26 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 
+/**
+ * Controller für View.fxml
+ * 
+ * @author Daniel Appenmaier
+ *
+ */
 public class Controller {
 
+	/*
+	 * Attribute
+	 */
 	@FXML
 	Label diceValueLabel;
 
 	@FXML
 	Button rollTheDiceButton;
 
+	/*
+	 * Methoden
+	 */
 	@FXML
 	private void rollTheDice(ActionEvent event) {
 		Random random = new Random();
