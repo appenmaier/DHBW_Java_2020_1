@@ -6,18 +6,16 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
 public class Controller implements Initializable {
 
 	@FXML
-	TextField textField;
+	private TextField textField;
+
 	@FXML
-	Button button;
-	@FXML
-	Label label;
+	private Label label;
 
 	public void initialize(URL location, ResourceBundle resources) {
 		textField.setText("Hallo Welt!");

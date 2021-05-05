@@ -9,8 +9,7 @@
 	fx:controller="chapter07.listings.listing05.Controller">
 	<children>
 		<TextField fx:id="textField" promptText="Eingabefeld" />
-		<Button fx:id="button" text="Drucktaste"
-			onAction="#inputToOutput" />
+		<Button text="Drucktaste" onAction="#inputToOutput" />
 		<Label fx:id="label" text="Ausgabefeld" />
 	</children>
 </VBox>

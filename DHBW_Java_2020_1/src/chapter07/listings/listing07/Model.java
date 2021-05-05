@@ -2,9 +2,8 @@ package chapter07.listings.listing07;
 
 public class Model {
 
-	private String text;
-
 	private static Model instance;
+	private String text;	
 
 	private Model() {
 

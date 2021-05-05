@@ -8,8 +8,7 @@
 	fx:controller="chapter07.listings.listing07.InputViewController">
 	<children>
 		<TextField fx:id="input" />
-		<Button fx:id="goToOutputView" text="Weiter"
-			onAction="#goToOutputView" />
+		<Button text="Weiter" onAction="#goToOutputView" />
 	</children>
 </VBox>
 

@@ -6,7 +6,6 @@
 <VBox xmlns:fx="http://javafx.com/fxml/1"
 	fx:controller="chapter07.listings.listing06.ControllerB">
 	<children>
-		<Button fx:id="goToViewAButton" text="Gehe zu A"
-			onAction="#goToViewA" />
+		<Button text="Gehe zu A" onAction="#goToViewA" />
 	</children>
 </VBox>

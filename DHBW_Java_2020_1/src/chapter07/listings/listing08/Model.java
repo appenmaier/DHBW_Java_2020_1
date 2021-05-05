@@ -5,9 +5,8 @@ import javafx.beans.property.StringProperty;
 
 public class Model {
 
-	private StringProperty text;
-
 	private static Model instance;
+	private StringProperty text;
 
 	private Model() {
 		text = new SimpleStringProperty();

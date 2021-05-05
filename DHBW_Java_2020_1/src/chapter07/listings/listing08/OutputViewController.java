@@ -8,29 +8,29 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
 public class OutputViewController implements Initializable {
 
 	@FXML
-	Button goToInputView;
-	@FXML
-	Label output;
+	private Label output;
 
-	Model model = Model.getInstance();
+	private Model model;
 
 	public void initialize(URL location, ResourceBundle resources) {
+		model = Model.getInstance();
 		output.textProperty().bind(model.getText());
 	}
 
 	public void goToInputView(ActionEvent actionEvent) throws IOException {
 		Parent root = FXMLLoader.load(getClass().getResource("InputView.fxml"));
 		Scene scene = new Scene(root);
-		Stage stage = (Stage) goToInputView.getScene().getWindow();
+		Node node = (Node) actionEvent.getSource();
+		Stage stage = (Stage) node.getScene().getWindow();
 		stage.setScene(scene);
 		stage.show();
 	}

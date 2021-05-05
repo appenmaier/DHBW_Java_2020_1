@@ -8,7 +8,6 @@
 	fx:controller="chapter07.listings.listing08.OutputViewController">
 	<children>
 		<Label fx:id="output" />
-		<Button fx:id="goToInputView" text="Zurück"
-			onAction="#goToInputView" />
+		<Button text="Zurück" onAction="#goToInputView" />
 	</children>
 </VBox>
