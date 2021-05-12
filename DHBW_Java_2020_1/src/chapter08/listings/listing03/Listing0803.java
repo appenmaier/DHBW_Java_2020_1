@@ -11,8 +11,9 @@ public class Listing0803 {
 
 		File file = new File("C:/Temp/text.txt");
 
-		try (FileWriter fw = new FileWriter(file); BufferedWriter bw = new BufferedWriter(fw)) {
-			bw.write("Hallo Welt!");
+		try (FileWriter fileWriter = new FileWriter(file);
+				BufferedWriter bufferedWriter = new BufferedWriter(fileWriter)) {
+			bufferedWriter.write("Hallo Welt!");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

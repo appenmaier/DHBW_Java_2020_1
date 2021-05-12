@@ -10,19 +10,19 @@ public class Listing0802 {
 	public static void main(String[] args) {
 
 		File file = new File("C:/Temp/text.txt");
-		FileWriter fw = null;
-		BufferedWriter bw = null;
+		FileWriter fileWriter = null;
+		BufferedWriter bufferedWriter = null;
 
 		try {
-			fw = new FileWriter(file);
-			bw = new BufferedWriter(fw);
-			bw.write("Hallo Welt!");
+			fileWriter = new FileWriter(file);
+			bufferedWriter = new BufferedWriter(fileWriter);
+			bufferedWriter.write("Hallo Welt!");
 		} catch (IOException e) {
 			e.printStackTrace();
 		} finally {
-			if (bw != null) {
+			if (bufferedWriter != null) {
 				try {
-					bw.close();
+					bufferedWriter.close();
 				} catch (IOException e) {
 					e.printStackTrace();
 				}

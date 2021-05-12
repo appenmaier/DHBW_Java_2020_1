@@ -11,9 +11,10 @@ public class Listing0804 {
 
 		File file = new File("C:/Temp/text.txt");
 
-		try (FileReader fr = new FileReader(file); BufferedReader br = new BufferedReader(fr)) {
+		try (FileReader fileReader = new FileReader(file);
+				BufferedReader bufferedReader = new BufferedReader(fileReader)) {
 			String line;
-			while ((line = br.readLine()) != null) {
+			while ((line = bufferedReader.readLine()) != null) {
 				System.out.println(line);
 			}
 		} catch (IOException e) {

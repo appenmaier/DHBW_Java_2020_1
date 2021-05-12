@@ -1,4 +1,4 @@
-package chapter08.listings.listing05;
+package chapter08.listings.listing07;
 
 public class InvalidPriceException extends Exception {
 
