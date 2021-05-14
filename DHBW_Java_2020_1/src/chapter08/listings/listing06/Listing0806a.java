@@ -1,11 +1,11 @@
-package chapter08.listings.listing07;
+package chapter08.listings.listing06;
 
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
 
-public class Listing0807a {
+public class Listing0806a {
 
 	public static void main(String[] args) {
 

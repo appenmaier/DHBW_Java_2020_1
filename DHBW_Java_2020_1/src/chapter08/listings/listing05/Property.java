@@ -1,4 +1,4 @@
-package chapter08.listings.listing07;
+package chapter08.listings.listing05;
 
 public class Property implements Sellable {
 
