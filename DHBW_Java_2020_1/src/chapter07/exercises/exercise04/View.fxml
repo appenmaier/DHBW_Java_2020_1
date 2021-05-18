@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" spacing="5.0"
+	xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="chapter07.exercises.exercise04.Controller">
+	<children>
+		<Label fx:id="diceValueLabel" />
+		<ImageView fx:id="diceImageView" nodeOrientation="INHERIT">
+			<viewport>
+				<Rectangle2D height="100.0" width="100.0" />
+			</viewport>
+		</ImageView>
+		<Button onAction="#rollTheDice" text="Würfeln" />
+	</children>
+	<padding>
+		<Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+	</padding>
+</VBox>
