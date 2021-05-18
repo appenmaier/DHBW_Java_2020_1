@@ -15,7 +15,9 @@ public class Demo0901 {
 
 		String text;
 
-		// generische Programmierung ohne Java Generics
+		/*
+		 * generische Programmierung ohne Java Generics
+		 */
 		Box box1 = new Box();
 		box1.setContent("Hallo Welt");
 
@@ -26,7 +28,9 @@ public class Demo0901 {
 		box1.setContent(5);
 		text = (String) box1.getContent(); // Laufzeitfehler
 
-		// generische Programmierung mit Java Generics
+		/*
+		 * generische Programmierung mit Java Generics
+		 */
 		GenericBox<String> genericBox1 = new GenericBox<>();
 		genericBox1.setContent("Hallo Welt");
 
@@ -36,11 +40,13 @@ public class Demo0901 {
 		text = genericBox1.getContent();
 		// genericBox1.setContent(5); // Kompilierungsfehler
 
-		// Namenskonventionen bei formalen Typparametern
+		/*
+		 * Namenskonventionen bei formalen Typparametern
+		 */
 		// ArrayList<E>: Data Element (E)
 		// GenericBox<T>: Type (T)
-		// GenericSixPack<T, U, V, W, X, Y>
 		// HashMap<K, V>: Key (K), Value (V)
+		// GenericSixPack<T, U, V, W, X, Y>: Type (T, U,...)
 
 	}
 
