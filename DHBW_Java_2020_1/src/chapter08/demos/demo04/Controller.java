@@ -26,7 +26,8 @@ public class Controller implements Initializable {
 	}
 
 	public void createLogEntry(ActionEvent actionEvent) {
-		model.createLogEntry(inputTextField.getText());
+		String input = inputTextField.getText();
+		model.createLogEntry(input);
 	}
 
 	public void printLogEntries(ActionEvent actionEvent) {
