@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Button?>
+
+<VBox xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="chapter08.demos.demo05.Controller">
+	<children>
+		<TextField fx:id="inputTextField" />
+		<Button text="Protokoll-Eintrag erzeugen"
+			onAction="#createLogEntry" />
+		<Button text="Protokoll-Einträge ausgeben"
+			onAction="#printLogEntries" />
+	</children>
+</VBox>
+
+
+
+
+
+
+
+
