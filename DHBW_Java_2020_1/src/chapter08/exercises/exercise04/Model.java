@@ -6,6 +6,12 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 
+/**
+ * Model für Exercise0804
+ * 
+ * @author Daniel Appenmaier
+ *
+ */
 public class Model {
 
 	/*
