@@ -15,6 +15,12 @@ import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
+/**
+ * Controller für RegistrationView.fxml
+ * 
+ * @author Daniel Appenmaier
+ *
+ */
 public class RegistrationController implements Initializable {
 
 	/*
