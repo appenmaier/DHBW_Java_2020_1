@@ -30,14 +30,15 @@ public class Controller {
 	 * Methoden
 	 */
 	public void login(ActionEvent actionEvent) throws IOException {
-		if (userNameTextField.getText().equals("") || passwordPasswordField.getText().equals("")) {
+		String userName = userNameTextField.getText();
+		String password = passwordPasswordField.getText();
+
+		if (userName.equals("") || password.equals("")) {
 			Alert alert = new Alert(AlertType.ERROR, "Fehlende Daten");
 			alert.show();
 			return;
 		}
 
-		String userName = userNameTextField.getText();
-		String password = passwordPasswordField.getText();
 		Alert alert = new Alert(AlertType.INFORMATION, "Name: " + userName + ", Passwort: " + password);
 		alert.show();
 	}
