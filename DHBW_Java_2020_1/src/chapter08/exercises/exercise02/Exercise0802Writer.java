@@ -1,16 +1,16 @@
-package chapter08.exercises.exercise01;
+package chapter08.exercises.exercise02;
 
-import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileWriter;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 
 public class Exercise0802Writer {
 
 	public static void main(String[] args) {
 
-		File file = new File("C:/Temp/persons.txt");
+		File file = new File("C:/Temp/persons.dat");
 		ArrayList<Person> persons = new ArrayList<>();
 
 		Person p1 = new Person("Hans", 42, 'm');
@@ -21,17 +21,13 @@ public class Exercise0802Writer {
 		persons.add(p2);
 		persons.add(p3);
 
-		try (FileWriter fileWriter = new FileWriter(file, true);
-				BufferedWriter bufferedWriter = new BufferedWriter(fileWriter)) {
-			for (Person p : persons) {
-				String line = p.getName() + ";" + p.getAge() + ";" + p.getGender();
-				bufferedWriter.write(line);
-				bufferedWriter.newLine();
-			}
+		try (FileOutputStream fileOutputStream = new FileOutputStream(file);
+				ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream)) {
+			objectOutputStream.writeObject(persons);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		
+
 	}
 
 }

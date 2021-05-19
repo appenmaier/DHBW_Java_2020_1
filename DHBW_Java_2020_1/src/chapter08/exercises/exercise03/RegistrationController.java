@@ -1,4 +1,4 @@
-package chapter07.exercises.exercise05;
+package chapter08.exercises.exercise03;
 
 import java.io.IOException;
 import java.net.URL;
@@ -11,18 +11,11 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
 import javafx.scene.control.Alert.AlertType;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
-/**
- * Controller für LoginView.fxml
- * 
- * @author Daniel Appenmaier
- *
- */
-public class LoginController implements Initializable {
+public class RegistrationController implements Initializable {
 
 	/*
 	 * Attribute
@@ -31,7 +24,7 @@ public class LoginController implements Initializable {
 	private TextField userNameTextField;
 
 	@FXML
-	private PasswordField passwordPasswordField;
+	private TextField passwordTextField;
 
 	private Model model;
 
@@ -42,19 +35,25 @@ public class LoginController implements Initializable {
 		model = Model.getInstance();
 	}
 
-	public void login(ActionEvent actionEvent) throws IOException {
+	public void register(ActionEvent actionEvent) throws IOException {
 		String userName = userNameTextField.getText();
-		String password = passwordPasswordField.getText();
+		String password = passwordTextField.getText();
 
 		if (userName.equals("") || password.equals("")) {
-			Alert alert = new Alert(AlertType.ERROR, "Fehlende Anmeldedaten");
+			Alert alert = new Alert(AlertType.ERROR, "Fehlende Registrierungsdaten");
 			alert.show();
 			return;
 		}
 
-		model.setUser(userName, password);
+		if (!model.checkUserName(userName)) {
+			Alert alert = new Alert(AlertType.ERROR, "Ungültiger Name");
+			alert.show();
+			return;
+		}
 
-		Parent root = FXMLLoader.load(getClass().getResource("UserView.fxml"));
+		model.registerUser(userName, password);
+
+		Parent root = FXMLLoader.load(getClass().getResource("LoginView.fxml"));
 		Scene newScene = new Scene(root);
 		Scene currentScene = userNameTextField.getScene();
 		Stage primaryStage = (Stage) currentScene.getWindow();

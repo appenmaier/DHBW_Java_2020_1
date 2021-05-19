@@ -1,12 +1,9 @@
 package chapter09.demos.demo01;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-
 /**
- * generische Programmierung mit und ohne Java Generics
+ * generische Entwicklung mit und ohne Java Generics
  * 
- * @author D054906
+ * @author Daniel Appenmaier
  *
  */
 public class Demo0901 {
