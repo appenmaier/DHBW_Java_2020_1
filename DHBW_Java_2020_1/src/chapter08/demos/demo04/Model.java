@@ -54,8 +54,6 @@ public class Model {
 		file = new File(LOGFILE_PATH);
 		if (file.exists()) {
 			loadLog();
-		} else {
-			saveLog();
 		}
 	}
 
