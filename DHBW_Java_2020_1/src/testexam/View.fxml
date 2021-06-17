@@ -26,7 +26,7 @@
 		<Button mnemonicParsing="false" onAction="#addMovie"
 			text="Film anlegen" GridPane.columnSpan="2"
 			GridPane.halignment="CENTER" GridPane.rowIndex="3" />
-		<Label text="Titel" />
+		<Label text="Beschreibung" />
 		<Label text="Genre" GridPane.rowIndex="1" />
 		<Label text="Erscheinungsjahr" GridPane.rowIndex="2" />
 		<TextField fx:id="descriptionTextField"
